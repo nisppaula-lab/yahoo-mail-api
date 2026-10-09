@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: yahoo-mail-api
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: YAHOO_EMAIL
+        sync: false
+      - key: YAHOO_APP_PASSWORD
+        sync: false
+      - key: API_TOKEN
+        sync: false
